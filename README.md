@@ -16,15 +16,56 @@
 - en la solapa izquiera escribimos 
 
  ```json
-{
-    message
-}
+query {
+  libros {
+    id,
+    titulo,
+    genero,
+    descripcion
+  }
 ```
 - como resultado, nos entregará la siguiente información
 ```json
 {
-    "data": {
-       "message": "hola devs"
-    }
+  "data": {
+    "libros": [
+      {
+        "id": 1,
+        "titulo": "Titulo 01",
+        "genero": "terror",
+        "descripcion": "Veniam nostrud ut labore id anim ea ad excepteur."
+      },
+      {
+        "id": 2,
+        "titulo": "Titulo 02",
+        "genero": "comedia",
+        "descripcion": "Lorem tempor est excepteur fugiat."
+      },
+      {
+        "id": 3,
+        "titulo": "Titulo 03",
+        "genero": "terror",
+        "descripcion": "Et nulla excepteur nostrud tempor ut irure ex ipsum eiusmod."
+      }
+    ]
+  }
+}
+```
+
+- También podemos usar las query variables para obtener los libros de un género específico
+```json
+{
+  "libroGenero": "comedia"
+}
+```
+
+```json
+query getSingleLibro($libroGenero: String) {
+  libros(genero: $libroGenero) {
+    id,
+    titulo,
+    genero,
+    descripcion
+  }
 }
 ```

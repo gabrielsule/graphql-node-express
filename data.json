@@ -1,0 +1,18 @@
+{
+    "libros": [{
+        "id": 1,
+        "titulo": "Titulo 01",
+        "descripcion": "Veniam nostrud ut labore id anim ea ad excepteur.",
+        "genero": "terror"
+    }, {
+        "id": 2,
+        "titulo": "Titulo 02",
+        "descripcion": "Lorem tempor est excepteur fugiat.",
+        "genero": "comedia"
+    }, {
+        "id": 3,
+        "titulo": "Titulo 03",
+        "descripcion": "Et nulla excepteur nostrud tempor ut irure ex ipsum eiusmod.",
+        "genero": "terror"
+    }]
+}
